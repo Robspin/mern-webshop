@@ -1,3 +1,16 @@
 main {
    min-height: 80vh;
 }
+
+h3 {
+   /* padding: 1rem 0; */
+   padding-top: 1rem;
+}
+
+strong {
+   font-weight: bold;
+}
+
+.rating span {
+   margin: 0.09rem;
+}
