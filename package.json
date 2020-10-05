@@ -1,0 +1,29 @@
+{
+   "name": "mern-webshop",
+   "version": "1.0.0",
+   "description": "MERN webshop",
+   "main": "server.js",
+   "scripts": {
+      "start": "node backend/server",
+      "server": "nodemon backend/server",
+      "client": "npm start --prefix frontend",
+      "dev": "concurrently \"npm run server\" \"npm run client\""
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Robspin/mern-webshop.git"
+   },
+   "author": "Robspin",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/Robspin/mern-webshop/issues"
+   },
+   "homepage": "https://github.com/Robspin/mern-webshop#readme",
+   "dependencies": {
+      "express": "^4.17.1"
+   },
+   "devDependencies": {
+      "concurrently": "^5.3.0",
+      "nodemon": "^2.0.4"
+   }
+}
