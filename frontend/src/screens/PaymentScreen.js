@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -17,6 +17,8 @@ const PaymentScreen = ({ history }) => {
    const [paymentMethod, setPaymentMethod] = useState('PayPal');
 
    const dispatch = useDispatch();
+
+   useEffect(() => {}, [paymentMethod]);
 
    const submitHandler = e => {
       e.preventDefault();
@@ -38,7 +40,7 @@ const PaymentScreen = ({ history }) => {
                      id='PayPal'
                      name='paymentMethod'
                      value='PayPal'
-                     checked
+                     defaultChecked
                      onChange={e => setPaymentMethod(e.target.value)}
                   ></Form.Check>
                   <Form.Check
@@ -47,7 +49,9 @@ const PaymentScreen = ({ history }) => {
                      id='Bitcoin'
                      name='paymentMethod'
                      value='Bitcoin'
-                     onChange={e => setPaymentMethod(e.target.value)}
+                     onChange={e => {
+                        setPaymentMethod(e.target.value);
+                     }}
                   ></Form.Check>
                </Col>
             </Form.Group>
