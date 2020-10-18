@@ -1,0 +1,4 @@
+Todo
+
+- reset cart after completing order
+- current step in placing order more clear

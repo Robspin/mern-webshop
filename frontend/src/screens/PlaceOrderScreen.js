@@ -22,7 +22,9 @@ const PlaceOrderScreen = ({ history }) => {
    );
    cart.shippingPrice = addDecimals(cart.itemsPrice > 50 ? 0 : 6.99);
    cart.taxPrice = addDecimals(Number((0.21 * cart.itemsPrice).toFixed(2)));
-   cart.totalPrice = Number(cart.itemsPrice) + Number(cart.shippingPrice);
+   cart.totalPrice = addDecimals(
+      Number(cart.itemsPrice) + Number(cart.shippingPrice)
+   );
 
    const orderCreate = useSelector(state => state.orderCreate);
    const { order, success, error } = orderCreate;
