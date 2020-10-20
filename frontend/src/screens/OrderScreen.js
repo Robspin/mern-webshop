@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { PayPalButton } from 'react-paypal-button-v2';
-import { Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap';
+import { Row, Col, ListGroup, Image, Card } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { ORDER_PAY_RESET } from '../constants/orderConstants';
@@ -60,7 +60,7 @@ const OrderScreen = ({ match, history }) => {
       // if (!order || order._id !== orderId) {
       //    dispatch(getOrderDetails(orderId));
       // }
-   }, [order, orderId, dispatch, successPay]);
+   }, [order, orderId, dispatch, successPay, userInfo, history]);
 
    const successPaymentHandler = paymentResult => {
       console.log(paymentResult);
