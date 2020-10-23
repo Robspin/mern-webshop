@@ -115,7 +115,10 @@ const PlaceOrderScreen = ({ history }) => {
                         <Row>
                            <Col>Items</Col>
                            <Col>
-                              € {Number(cart.itemsPrice - cart.taxPrice)}
+                              €{' '}
+                              {Number(
+                                 addDecimals(cart.itemsPrice - cart.taxPrice)
+                              )}
                            </Col>
                         </Row>
                         <Row>
