@@ -2,5 +2,5 @@ Todo
 
 - reset cart after completing order
 - current step in placing order more clear
-- everyone can view anyone's orders
 - Admin manage qty
+- Product already reviewed message persists in other orders
